@@ -1,0 +1,192 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/">
+    <bib:Document rdf:about="https://app.diagrams.net/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://app.diagrams.net/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Document rdf:about="https://create.microsoft.com/en-us/template/simple-gantt-chart-4bf6b793-490f-4623-84ca-c9c6251a91fc">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_8"/>
+        <dc:title>Simple Gantt Chart | Microsoft Create</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://create.microsoft.com/en-us/template/simple-gantt-chart-4bf6b793-490f-4623-84ca-c9c6251a91fc</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 00:50:19</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_8">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Simple Gantt Chart | Microsoft Create</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://create.microsoft.com/en-us/template/simple-gantt-chart-4bf6b793-490f-4623-84ca-c9c6251a91fc</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 00:50:23</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://app.diagrams.net/?src=about">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <link:link rdf:resource="#item_10"/>
+        <dc:title>diagrams.net</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://app.diagrams.net/?src=about</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 00:51:30</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_10">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>diagrams.net</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://app.diagrams.net/?src=about</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 00:51:35</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://www.atlassian.com/agile/kanban">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Atlassian</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Atlassian</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_12"/>
+        <dc:title>Kanban - A brief introduction</dc:title>
+        <dcterms:abstract>An introduction to kanban methodology for agile software development and its benefits for your agile team.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.atlassian.com/agile/kanban</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 21:26:03</dcterms:dateSubmitted>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_12">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.atlassian.com/agile/kanban</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 21:26:11</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="https://about.gitlab.com/free-trial/devsecops/">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website></z:Website>
+        </dcterms:isPartOf>
+        <dcterms:isReferencedBy rdf:resource="#item_14"/>
+        <link:link rdf:resource="#item_15"/>
+        <dc:title>Try GitLab Ultimate for free</dc:title>
+        <dcterms:abstract>Enjoy GitLab Ultimate 30 day free trial and experience the full software development lifecycle &amp; DevOps tool with an extensive range of innovative features.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://about.gitlab.com/free-trial/devsecops/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 21:31:50</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Memo rdf:about="#item_14">
+        <rdf:value>&lt;blockquote&gt;Security and compliance are built in, out of the box, giving you the visibility and control necessary to protect the integrity of your software&lt;/blockquote&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_15">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://about.gitlab.com/free-trial/devsecops/?utm_medium=cpc&amp;utm_source=google&amp;utm_campaign=brand_emea_pr_rsa_br_broad_free-trial_&amp;utm_content=free-trial&amp;_bt=654402617693&amp;_bk=what%20is%20gitlab&amp;_bm=b&amp;_bn=g&amp;_bg=146006191918&amp;gclid=CjwKCAjwgqejBhBAEiwAuWHioEh0fcdpSesCim_FqNq3smE2zOx_ayexn-CxaeX37fHYXpf2u5gHaBoCsR8QAvD_BwE</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 21:31:57</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <bib:Document rdf:about="#item_16">
+        <z:itemType>webpage</z:itemType>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Atlassian</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                       <foaf:surname>Atlassian</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dcterms:isReferencedBy rdf:resource="#item_17"/>
+        <link:link rdf:resource="#item_18"/>
+        <dc:title>Kanban - A brief introduction</dc:title>
+        <dcterms:abstract>An introduction to kanban methodology for agile software development and its benefits for your agile team.</dcterms:abstract>
+        <z:language>en</z:language>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.atlassian.com/agile/kanban</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 21:32:44</dcterms:dateSubmitted>
+    </bib:Document>
+    <bib:Memo rdf:about="#item_17">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;blockquote&gt;
+&lt;p&gt;are represented visually on a kanban board, all&lt;span class=&quot;citation&quot; data-citation=&quot;%7B%22citationItems%22%3A%5B%5D%2C%22properties%22%3A%7B%7D%7D&quot;&gt;()&lt;/span&gt;owing team members to see the state of every piece of work at any time&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_18">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>Snapshot</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>https://www.atlassian.com/agile/kanban</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2023-05-21 21:32:52</dcterms:dateSubmitted>
+        <z:linkMode>1</z:linkMode>
+        <link:type>text/html</link:type>
+    </z:Attachment>
+    <z:Collection rdf:about="#collection_1">
+        <dc:title>SD</dc:title>
+        <dcterms:hasPart rdf:resource="https://app.diagrams.net/?src=about"/>
+        <dcterms:hasPart rdf:resource="https://about.gitlab.com/free-trial/devsecops/"/>
+        <dcterms:hasPart rdf:resource="#item_16"/>
+    </z:Collection>
+</rdf:RDF>

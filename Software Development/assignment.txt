@@ -1,0 +1,16 @@
+6 pages max
+must use the template DO NOT CHANGE ANYTHING
+caption above tables
+caption below picture
+
+
+google scholar is used for academic papers
+
+bibliography tool:
+zotero
+it has an extension on the web which will allow you
+to save to library
+to add to word:
+use zotero plug in on word, select IEEE then search
+word and click on the citation
+to add bibliography use plug in and click IEEE.
