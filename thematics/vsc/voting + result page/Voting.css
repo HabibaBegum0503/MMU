@@ -1,0 +1,25 @@
+Body{
+
+    background-color: #7800f5;
+    position: relative;
+    text-align: center;
+    font-size: 150%;
+}
+
+.buttons button{
+    display: block;
+    
+} 
+
+
+
+button{
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 2%;
+    font-size:x-large;
+    border-color: #7800f5;
+    align-items: center;
+}
+

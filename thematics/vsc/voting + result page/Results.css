@@ -1,0 +1,15 @@
+
+  Body{
+
+    background-color: #7800f5;
+    position: relative;
+    text-align: center;
+    font-size: 150%;
+  }
+
+  p{
+    background-color:black;
+    padding:2%;
+    color:white;
+  }
+  
