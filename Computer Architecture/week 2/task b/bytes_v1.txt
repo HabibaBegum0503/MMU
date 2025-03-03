@@ -1,0 +1,9 @@
+Data storage terms
+
+Terms based on binary system
+	1 byte			 	is 	8 bits
+	1 kibibyte (KiB) 	is	1024 bytes
+	1 mebibyte (MiB) 	is	1024 kibibytes
+	1 gibibyte (GiB) 	is	1024 mebibytes
+
+Note that the prefix kilo is based on the decimal system and means 1000 (and mega means 1,000,000) but in traditional usage kilobyte (KB) is used to refer to 1024 bytes etc.
