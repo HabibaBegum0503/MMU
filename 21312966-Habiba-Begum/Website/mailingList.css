@@ -1,0 +1,49 @@
+body {
+    background-image: url(images/mailingList.jpg);
+    background-position: center;
+    background-size: cover;
+    color: aliceblue;
+}
+
+#container {
+    width: 80vw;
+    height: 90vh;
+    margin-left: 2vw;
+} 
+
+
+#navigation {
+    position: absolute;
+    width: 40vw;
+    height: 10vh;
+    margin-right: 5vw;
+    margin-left: 50vw;
+    margin-top: 2vh;
+}
+
+.navbtn {
+    display: inline;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+    color: aliceblue;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: crimson;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    
+}
+
