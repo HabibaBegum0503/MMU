@@ -1,0 +1,83 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgba(170, 228, 228, 0.842);
+}
+
+* {
+    font-family: "sans-serif";
+    margin: 0;
+    padding: 0;
+}
+
+#navigation {
+    width: 40vw;
+    margin-right: 5vh;
+    margin-left: 50vw;
+    margin-top: 1vh;
+}
+
+.navbtn {
+    display: inline;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+a {
+    text-decoration: none;
+    font-size: large;
+    color: black;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: crimson;
+}
+
+#row1 {
+    margin-top: 2vh;
+    background-color: black;
+    width: 100vw;
+    height:40vh;
+    color: white;
+}
+
+.banner {
+    width: 30vw;
+    height: 40vh;
+}
+
+#pictureStage {
+    width: 25vw;
+    height: 32vh;
+}
+
+#pictureRed {
+    width: 20vw;
+    height: 40vh;
+}
+
+#left {
+    float: left;
+    width: 50vw;
+    margin-left: 2vw;
+}
+
+#right {
+    float: right;
+    width: 45vw;
+}
+
+#references {
+    margin-left: 5vw;
+    clear: both;
+    margin-top: 5vh;
+}
+
+
+#marquee{
+    background-color:grey;
+}
+
