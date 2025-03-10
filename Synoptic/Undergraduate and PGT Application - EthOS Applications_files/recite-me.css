@@ -1,0 +1,14 @@
+﻿div.reciteTranslation {
+/* color: #fff; */
+padding: 10px 20px;
+margin: 0;
+float: right;
+}
+
+a.reciteTranslation{
+color: #ffff!important;
+}
+
+.recite-ele {
+    overflow: hidden;
+}

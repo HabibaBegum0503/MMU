@@ -1,0 +1,383 @@
+.icon-home,.icon-home2,.icon-home3,.icon-office,.icon-newspaper,.icon-pencil,.icon-pencil2,.icon-pen,.icon-droplet,.icon-image,.icon-camera,.icon-music,.icon-connection,.icon-feed,.icon-book,.icon-books,.icon-file,.icon-file2,.icon-copy,.icon-copy2,.icon-paste,.icon-stack,.icon-folder,.icon-folder-open,.icon-tag,.icon-barcode,.icon-phone,.icon-address-book,.icon-envelop,.icon-pushpin,.icon-location,.icon-history,.icon-clock,.icon-alarm,.icon-stopwatch,.icon-calendar,.icon-calendar2,.icon-print,.icon-cabinet,.icon-drawer,.icon-box-add,.icon-box-remove,.icon-download,.icon-upload,.icon-undo,.icon-redo,.icon-bubble,.icon-bubbles,.icon-user,.icon-users,.icon-spinner,.icon-search,.icon-zoom-in,.icon-zoom-out,.icon-expand,.icon-expand2,.icon-contract,.icon-key,.icon-lock,.icon-unlocked,.icon-settings,.icon-cog,.icon-pie,.icon-stats,.icon-bars,.icon-remove,.icon-target,.icon-download2,.icon-upload2,.icon-earth,.icon-link,.icon-bookmark,.icon-bookmarks,.icon-thumbs-up,.icon-thumbs-up2,.icon-notification,.icon-info,.icon-close,.icon-checkmark,.icon-minus,.icon-plus,.icon-shuffle,.icon-arrow-up-left,.icon-arrow-up,.icon-arrow-up-right,.icon-arrow-right,.icon-arrow-down-right,.icon-arrow-down,.icon-arrow-down-left,.icon-arrow-left,.icon-crop,.icon-scissors,.icon-new-tab,.icon-share,.icon-file-word,.icon-file-excel,.icon-file-css,.icon-warning,.icon-cloud,.icon-envelope,.icon-clock2,.icon-pencil3,.icon-plus2,.icon-minus2,.icon-picture,.icon-home4,.icon-bookmark2,.icon-wrench,.icon-refresh,.icon-location2,.icon-move,.icon-checkmark2,.icon-cancel,.icon-alarm2,.icon-bolt,.icon-paperclip,.icon-floppy,.icon-floppy2,.icon-filter,.icon-database,.icon-lines,.icon-info2 {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background-image: url(../Content/Icons/action-sprites-32.png);
+	background-repeat: no-repeat;
+}
+.icon-home {
+	background-position: 0 0;
+}
+.icon-home2 {
+	background-position: -64px 0;
+}
+.icon-home3 {
+	background-position: -128px 0;
+}
+.icon-office {
+	background-position: -192px 0;
+}
+.icon-newspaper {
+	background-position: -256px 0;
+}
+.icon-pencil {
+	background-position: -320px 0;
+}
+.icon-pencil2 {
+	background-position: -384px 0;
+}
+.icon-pen {
+	background-position: -448px 0;
+}
+.icon-droplet {
+	background-position: -512px 0;
+}
+.icon-image {
+	background-position: -576px 0;
+}
+.icon-camera {
+	background-position: -640px 0;
+}
+.icon-music {
+	background-position: 0 -64px;
+}
+.icon-connection {
+	background-position: -64px -64px;
+	width: 40px;
+}
+.icon-feed {
+	background-position: -128px -64px;
+}
+.icon-book {
+	background-position: -192px -64px;
+}
+.icon-books {
+	background-position: -256px -64px;
+}
+.icon-file {
+	background-position: -320px -64px;
+}
+.icon-file2 {
+	background-position: -384px -64px;
+}
+.icon-copy {
+	background-position: -448px -64px;
+}
+.icon-copy2 {
+	background-position: -512px -64px;
+}
+.icon-paste {
+	background-position: -576px -64px;
+}
+.icon-stack {
+	background-position: -640px -64px;
+}
+.icon-folder {
+	background-position: 0 -128px;
+}
+.icon-folder-open {
+	background-position: -64px -128px;
+}
+.icon-tag {
+	background-position: -128px -128px;
+}
+.icon-barcode {
+	background-position: -192px -128px;
+}
+.icon-phone {
+	background-position: -256px -128px;
+}
+.icon-address-book {
+	background-position: -320px -128px;
+}
+.icon-envelop {
+	background-position: -384px -128px;
+}
+.icon-pushpin {
+	background-position: -448px -128px;
+}
+.icon-location {
+	background-position: -512px -128px;
+}
+.icon-history {
+	background-position: -576px -128px;
+	width: 33px;
+}
+.icon-clock {
+	background-position: -640px -128px;
+}
+.icon-alarm {
+	background-position: 0 -192px;
+}
+.icon-stopwatch {
+	background-position: -64px -192px;
+}
+.icon-calendar {
+	background-position: -128px -192px;
+}
+.icon-calendar2 {
+	background-position: -192px -192px;
+}
+.icon-print {
+	background-position: -256px -192px;
+}
+.icon-cabinet {
+	background-position: -320px -192px;
+}
+.icon-drawer {
+	background-position: -384px -192px;
+}
+.icon-box-add {
+	background-position: -448px -192px;
+}
+.icon-box-remove {
+	background-position: -512px -192px;
+}
+.icon-download {
+	background-position: -576px -192px;
+}
+.icon-upload {
+	background-position: -640px -192px;
+}
+.icon-undo {
+	background-position: 0 -256px;
+}
+.icon-redo {
+	background-position: -64px -256px;
+}
+.icon-bubble {
+	background-position: -128px -256px;
+}
+.icon-bubbles {
+	background-position: -192px -256px;
+	width: 36px;
+}
+.icon-user {
+	background-position: -256px -256px;
+}
+.icon-users {
+	background-position: -320px -256px;
+}
+.icon-spinner {
+	background-position: -384px -256px;
+}
+.icon-search {
+	background-position: -448px -256px;
+}
+.icon-zoom-in {
+	background-position: -512px -256px;
+}
+.icon-zoom-out {
+	background-position: -576px -256px;
+}
+.icon-expand {
+	background-position: -640px -256px;
+}
+.icon-expand2 {
+	background-position: 0 -320px;
+}
+.icon-contract {
+	background-position: -64px -320px;
+}
+.icon-key {
+	background-position: -128px -320px;
+}
+.icon-lock {
+	background-position: -192px -320px;
+}
+.icon-unlocked {
+	background-position: -256px -320px;
+}
+.icon-settings {
+	background-position: -320px -320px;
+}
+.icon-cog {
+	background-position: -384px -320px;
+}
+.icon-pie {
+	background-position: -448px -320px;
+}
+.icon-stats {
+	background-position: -512px -320px;
+}
+.icon-bars {
+	background-position: -576px -320px;
+}
+.icon-remove {
+	background-position: -640px -320px;
+}
+.icon-target {
+	background-position: 0 -384px;
+}
+.icon-download2 {
+	background-position: -64px -384px;
+}
+.icon-upload2 {
+	background-position: -128px -384px;
+}
+.icon-earth {
+	background-position: -192px -384px;
+}
+.icon-link {
+	background-position: -256px -384px;
+	width: 33px;
+	height: 33px;
+}
+.icon-bookmark {
+	background-position: -320px -384px;
+}
+.icon-bookmarks {
+	background-position: -384px -384px;
+}
+.icon-thumbs-up {
+	background-position: -448px -384px;
+}
+.icon-thumbs-up2 {
+	background-position: -512px -384px;
+}
+.icon-notification {
+	background-position: -576px -384px;
+}
+.icon-info {
+	background-position: -640px -384px;
+}
+.icon-close {
+	background-position: 0 -448px;
+}
+.icon-checkmark {
+	background-position: -64px -448px;
+}
+.icon-minus {
+	background-position: -128px -448px;
+}
+.icon-plus {
+	background-position: -192px -448px;
+}
+.icon-shuffle {
+	background-position: -256px -448px;
+}
+.icon-arrow-up-left {
+	background-position: -320px -448px;
+}
+.icon-arrow-up {
+	background-position: -384px -448px;
+}
+.icon-arrow-up-right {
+	background-position: -448px -448px;
+}
+.icon-arrow-right {
+	background-position: -512px -448px;
+}
+.icon-arrow-down-right {
+	background-position: -576px -448px;
+}
+.icon-arrow-down {
+	background-position: -640px -448px;
+}
+.icon-arrow-down-left {
+	background-position: 0 -512px;
+}
+.icon-arrow-left {
+	background-position: -64px -512px;
+}
+.icon-crop {
+	background-position: -128px -512px;
+}
+.icon-scissors {
+	background-position: -192px -512px;
+}
+.icon-new-tab {
+	background-position: -256px -512px;
+}
+.icon-share {
+	background-position: -320px -512px;
+}
+.icon-file-word {
+	background-position: -384px -512px;
+}
+.icon-file-excel {
+	background-position: -448px -512px;
+}
+.icon-file-css {
+	background-position: -512px -512px;
+}
+.icon-warning {
+	background-position: -576px -512px;
+}
+.icon-cloud {
+	background-position: -640px -512px;
+}
+.icon-envelope {
+	background-position: 0 -576px;
+}
+.icon-clock2 {
+	background-position: -64px -576px;
+}
+.icon-pencil3 {
+	background-position: -128px -576px;
+	width: 34px;
+}
+.icon-plus2 {
+	background-position: -192px -576px;
+}
+.icon-minus2 {
+	background-position: -256px -576px;
+}
+.icon-picture {
+	background-position: -320px -576px;
+}
+.icon-home4 {
+	background-position: -384px -576px;
+}
+.icon-bookmark2 {
+	background-position: -448px -576px;
+}
+.icon-wrench {
+	background-position: -512px -576px;
+	width: 33px;
+	height: 33px;
+}
+.icon-refresh {
+	background-position: -576px -576px;
+}
+.icon-location2 {
+	background-position: -640px -576px;
+}
+.icon-move {
+	background-position: 0 -640px;
+}
+.icon-checkmark2 {
+	background-position: -64px -640px;
+}
+.icon-cancel {
+	background-position: -128px -640px;
+}
+.icon-alarm2 {
+	background-position: -192px -640px;
+}
+.icon-bolt {
+	background-position: -256px -640px;
+}
+.icon-paperclip {
+	background-position: -320px -640px;
+	width: 33px;
+	height: 33px;
+}
+.icon-floppy {
+	background-position: -384px -640px;
+}
+.icon-floppy2 {
+	background-position: -384px -640px;
+}
+.icon-filter {
+	background-position: -448px -640px;
+}
+.icon-database {
+	background-position: -512px -640px;
+}
+.icon-lines {
+	background-position: -576px -640px;
+}
+.icon-info2 {
+	background-position: -640px -640px;
+}

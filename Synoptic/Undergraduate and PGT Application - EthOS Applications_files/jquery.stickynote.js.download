@@ -1,0 +1,211 @@
+(function ($) {
+
+    $.fn.stickynote = function (options) {
+        var opts = $.extend({}, $.fn.stickynote.defaults, options);
+        return this.each(function () {
+            var $this = $(this);
+            var o = $.meta ? $.extend({}, opts, $this.data()) : opts;
+            switch (o.event) {
+                case 'dblclick':
+                    $this.dblclick(function (e) { $.fn.stickynote.createNote(o); });
+                    break;
+                case 'click':
+                    $this.click(function (e) { $.fn.stickynote.createNote(o); });
+                    break;
+            }
+        });
+    };
+    $.fn.stickynote.defaults = {
+        size: 'small',
+        event: 'click',
+        color: '#000000'
+    };
+    $.fn.stickynote.createNote = function (o) {
+        var position = '';
+        var id = generateGUID();
+        var model = new FormPanelComment('');
+        var noteContent = $(document.createElement('textarea'));
+        var divNote = $(document.createElement('div'))
+							.addClass('jStickyNote')
+							.css('cursor', 'move');
+
+        divNote.append(noteContent);
+        if (o.comment) {
+            if (o.owner) {
+                noteContent.text(o.comment);
+            } else {
+                noteContent.html(o.comment).attr('disabled', 'disabled');
+            }
+        }
+
+        if (o.owner) {
+            var divCreate = $(document.createElement('div'))
+                .addClass('jSticky-create')
+                .attr('title', 'Save Sticky Note')
+                .attr('style', 'display:none');
+            divNote.find('textarea').on('keyup', function () {
+                divCreate.show();
+            });
+
+            divCreate.click(function(e) {
+                if ($(this).parent().find('textarea').val().trim() == "")
+                    return;
+
+               // saveComment($(this).parent().find('textarea').val());
+                //$(this).parent().find('textarea').css('color', 'black').blur();
+                //divRemove.show();
+            });
+
+            noteContent.focusout(function (e) {
+                if ($(this).val().trim() == "")
+                    return;
+                saveComment($(this).val());
+                $(this).css('color', 'black');
+                divRemove.show();
+                divCreate.hide();
+            });
+
+        }
+        var divDelete = $(document.createElement('div'))
+							.addClass('jSticky-delete');
+
+        var divRemove = $(document.createElement('div'))
+							.addClass('icon-remove16').css("position", "absolute").css("top", "-2px").css("right", "12px");
+
+        divDelete.click(function (e) {
+            $(this).parent().slideUp();
+        });
+
+        divRemove.click(function (e) {
+            showDeleteModal();
+            
+        });
+
+        var posRight = $('#' + o.containment).find('.jStickyNote').length * 20 + 23;
+        var posTop = 20 + posRight;
+
+        var divWrap = $(document.createElement('div'))
+							.css({ 'position': 'absolute', 'top': posTop, 'right': posRight, 'display': 'none' })
+							.append(divNote)
+							.append(divDelete)
+							.append(divCreate);
+
+        switch (o.size) {
+            case 'large':
+                if (o.owner) {
+                    divWrap.addClass('jSticky-large').attr('id',id);
+                    divWrap.append(divRemove);
+                    divRemove.hide();
+                } else
+                    divWrap.addClass('jSticky-large-blue').attr('id', id);
+                break;
+            case 'small':
+                divWrap.addClass('jSticky-medium');
+                break;
+        }
+        if (o.position) {
+            if (o.owner) {
+                divRemove.show();
+            }
+            divWrap.attr('style', o.position);
+        }
+        if (o.containment) {
+            divWrap.draggable({
+                containment: '#' + o.containment, scroll: false, start: function (event, ui) {
+                    noteContent.blur();
+                    if (o.ontop)
+                        $(this).parent().append($(this));
+                }, stop: function () {
+                    var parentwidth = $(this).parent().outerWidth();
+                    var parentheight = $(this).parent().outerHeight();
+                    var posx = $(this).position().left;
+                    var posy = $(this).position().top;
+                    var percentleft = posx / (parentwidth);
+                    var percenttop = posy / (parentheight);
+                    $(this).css("left", percentleft * 100 + "%").css("right", "");
+                    $(this).css("top", percenttop * 100 + "%");
+                    position = percentleft * 100 + "%";
+                    
+                    saveComment($(this).find('textarea').val());
+                }
+            });
+            
+        }
+        else {
+            divWrap.draggable({
+                scroll: false, start: function (event, ui) {
+                    if (o.ontop)
+                        $(this).parent().append($(this));
+                }
+            });
+        }
+
+        $('#' + o.containment).append(divWrap);
+        divWrap.slideDown();
+
+        if (!o.comment) {
+            noteContent.focus();
+        }
+
+        function showDeleteModal() {
+            var divModal = $(document.createElement('div'))
+                .addClass('modal hide fade deleteComment').append('<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close Modal">&times;</button><h3>Delete</h3></div><div class="modal-body"><div class="alert alert-error">Are you sure you want to delete this note</div></div><div class="modal-footer"><button id="submitbutton" class="btn btn-primary" onclick="deleteNote(' + model.UserProjectFormId + ',' + model.FormPanelCommentId + ',&quot;' + id + '&quot;);">Delete</button><a href="#" data-dismiss="modal" class="btn">Close</a></div>');
+            divModal.modal('show');
+        }
+       
+
+        function saveComment(comment) {
+            if (comment == "")
+                return;
+
+            model.Comment = comment;
+            model.Position = divNote.parent().attr("style");
+            $.ajax({
+                type: "POST",
+                url: "/Page/SavePanelComment/",
+                data: { userProjectFormId: model.UserProjectFormId, model: JSON.stringify(model) },
+                success: function (data) {
+                    model.FormPanelCommentId = data;
+                    $('#stickynote_' + model.PanelGroupId).html($('#stickynote_' + model.PanelGroupId).parent().parent().find('.jStickyNote').length);
+                    getFormActions();
+                }
+            });
+        }
+
+        function FormPanelComment() {
+            this.Comment = o.comment;
+            this.UserProjectFormId = o.userprojectFormId;
+            this.PanelGroupId = o.panelgroupId;
+            this.Position = o.position;
+            this.FormPanelCommentId = o.formPanelCommentId;
+        }
+    };
+})(jQuery);
+
+function deleteNote(userProjectFormId, id, noteid) {
+    $.ajax({
+        type: "POST",
+        url: "/Page/DeletePanelComment/",
+        data: { userProjectFormId: userProjectFormId, id: id },
+        success: function () {
+            
+            $('.deleteComment').modal('hide');
+            $('#' + noteid).parent().find('.stickynote').html($('#' + noteid).parent().find('.jStickyNote').length - 1);
+            getFormActions();
+            $('#' + noteid).remove();
+        }
+    });
+    
+}
+
+
+
+function generateGUID() {
+    var d = new Date().getTime();
+    var guid = 'xxxxxxxx-xxxx-xxxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = (d + Math.random() * 16) % 16 | 0;
+        d = Math.floor(d / 16);
+        return (c == 'x' ? r : (r & 0x7 | 0x8)).toString(16);
+    });
+    return guid;
+};

@@ -1,0 +1,78 @@
+﻿var signalRConnections = {
+    connectionId: 0,
+    userProjectForm: {
+        connect: function (userProjectFormId, userOnFormIndex) {
+            var formHub = $.connection.formHub;
+
+            // Start the connection.
+            //Call server method to give the connection a group
+            $.connection.hub.start().done(function () {
+                formHub.server.assignGroup(userProjectFormId);
+            });
+
+            //function purely to store the connectionid on the client
+            formHub.client.setConnectionId = function (connectionId) {
+                signalRConnections.connectionId = connectionId;
+            };
+
+            //Inform users that the form they are on has been submitted and therefore change actions appropriately
+            formHub.client.formLocked = function (callerConnectionId, message) {
+
+                //Run code for all connections except the caller
+                if (callerConnectionId != signalRConnections.connectionId) {
+
+                    if (userOnFormIndex) {
+                        getFormIndexActions().then(function () {
+                            showFeedback("success", message);
+                        });
+                    } else {
+                        window.location.href = '/Page/RefreshPage?url=' + window.location.href + '&message=The form has been locked';
+                    }
+                }
+
+
+            },
+//Inform users that the form they are on is being submitted
+            formHub.client.formSubmitting = function (callerConnectionId, message) {
+                //Run code for all connections except the caller
+                if (callerConnectionId != signalRConnections.connectionId) {
+                    showFeedback("success", message);
+                    HideTheSubmitButton();
+                }
+
+            },
+            
+            //Inform users that the form has been unlocked (kick signature users off the form)
+            formHub.client.formUnlocked = function (callerConnectionId, message) {
+
+                //Run code for all connections except the caller
+                if (callerConnectionId != signalRConnections.connectionId) {
+
+                    if (userOnFormIndex) {
+                        getFormIndexActions().then(function () {
+                            showFeedback("success", message);
+                        });
+                    } else {
+                        getFormActions().then(function () {
+                            checkLocked().then(function () {
+                                removeSignaturesAndRequestsFromPage();
+                                setUpSignatureAndRequestButtonHandlers();
+                                showFeedback("success", message);
+                            });
+                        });
+                    }
+                }
+            },
+            formHub.client.formComplete = function () {
+                //Run code for all connections that are on the index page
+                if (userOnFormIndex) {
+                    getFormStatus();
+                }
+            };
+            
+            formHub.client.formSignatuerRequested = function(callerConnectionId) {
+                
+            }
+        },
+    }
+}
